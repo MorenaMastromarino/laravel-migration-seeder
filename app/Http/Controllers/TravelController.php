@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Travel;
 use Illuminate\Http\Request;
 
 class TravelController extends Controller
 {
     public function index(){
-        return view('travels');
+        $travels = Travel::all();
+
+        return view('travels', compact('travels'));
     }
 }

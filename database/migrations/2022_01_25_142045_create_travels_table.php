@@ -24,7 +24,7 @@ class CreateTravelsTable extends Migration
             $table->string('accomodation_address', 50);
             $table->string('room_type', 50);
             $table->tinyInteger('duration')->unsigned();
-            $table->date('return_data');
+            $table->date('return_date');
             $table->text('description')->nullable();
             $table->decimal('price', 8, 2);
             $table->boolean('is_available')->default(1);
